@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+:root{
+    font: 62.5%;
+    --bcolor: linear-gradient(45deg, #190361, #bb00ff);
+    --StartY: 100%;
+    --delay: 0.5s;
+}
+
+
+html, body{
+    height: 100vh;
+}
+
+body{
+    background: var(--bcolor);    
+    background-repeat: no-repeat;
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    text-align: center;
+
+    background-color: white;
+    padding: 4.8rem 6.4rem 6.4rem;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+main h1{
+    padding-bottom: 1.4rem;
+
+    color: #34355B;
+
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+main p{
+    padding-bottom: 2rem;
+
+    color: #34355B;
+
+    font-family: DM Sans;
+    font-size: 15px;
+    font-style: normal; 
+    font-weight: 400;
+    line-height: normal;
+}
+
+.hide{
+    display: none !important;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes tremer {
+    0%{
+        transform: translate(0,0) rotate(0);
+    }
+    25%{
+        transform: translate(-1px,-1px) rotate(-1deg);
+    }
+    50%{
+        transform: translate(1px,1px) rotate(1deg);
+    }
+    75%{
+        transform: translate(-1px,-1px) rotate(-1deg);
+    }
+    100%{
+        transform: translate(1px,1px) rotate(1deg);
+    }
+}
+
+button.bixcoito img{
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+button.bixcoito img:hover{
+    animation: tremer 0.2s infinite;
+}
+
+button{
+    border: none;
+    background-color: white;
+    
+}
+
+
+
+/*Tela 2*/
+
+
+@keyframes appear {
+    0%{
+        transform: scale(0), translateY(10rem);
+        opacity: 0;
+    }
+    25%{
+        transform: scale(25%), translateY(6rem);
+        opacity: 0.4;
+    }
+    50%{
+        transform: scale(50%), translateY(4rem);
+        opacity: 0.6;
+    }
+    75%{
+        transform: scale(75%), translateY(2rem);
+        opacity: 0.8;
+    }
+    100%{
+        transform: scale(100%), translateY(0);
+        opacity: 1;
+    }
+}
+
+/*
+
+@keyframes appear {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+        transform: translateY(10rem)
+    }
+    25%{
+        transform: scale(25%);
+        opacity: 0.4;
+        transform: translateY(6rem)
+    }
+    50%{
+        transform: scale(50%);
+        opacity: 0.6;
+        transform: translateY(4rem)
+    }
+    75%{
+        transform: scale(75%);
+        opacity: 0.8;
+        transform: translateY(2rem)
+    }
+    100%{
+        transform: scale(100%);
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+*/
+
+.luck{
+    --startY: 100%;
+    animation: move 0.5s;
+    animation: appear var(--delay) backwards;
+}
+
+
+.screen2{
+    max-width: 24.8rem;
+    max-height: 56.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.luck{
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    color: #000;
+}
+
+.luck{
+    text-align: center;
+    font-family: Dancing Script;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container-image{
+    padding: 4.2rem 0;
+}
+
+.OpenCookieAgain{
+    border: none;
+    border-radius: 4px;
+    background: #FF9500;
+    cursor: pointer;
+
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    gap: 10px;
+
+    color: #FFF;
+
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.OpenCookieAgain:hover{
+    background: #dd8202;
+    transition: 0.3s;
+}
